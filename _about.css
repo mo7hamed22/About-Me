@@ -1,0 +1,131 @@
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px; }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  display: none; }
+
+.img-container {
+  text-align: center; }
+  .img-container img {
+    border-radius: 80%; }
+
+.about-section {
+  padding: 50px 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white; }
+
+.container {
+  padding: 0 16px; }
+
+.title {
+  color: grey; }
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%; }
+
+.button:hover {
+  background-color: #555; }
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block; } }
+.facebook {
+  color: #3b5998;
+  font-size: 1rem; }
+
+.linkedin {
+  color: #00aced; }
+
+.twitter {
+  color: #00aced; }
+
+.github {
+  color: #4078c0; }
+
+.social-icon {
+  height: 30px;
+  width: 30px;
+  font-size: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 70%;
+  text-decoration: none;
+  border: 1px dotted #333;
+  transition: 0.3s; }
+
+.social-icon:hover {
+  border-color: #00aced;
+  text-decoration: none; }
+
+.contact-links {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-bottom: 10px;
+  color: #3525af;
+  right: 0px; }
+
+.anser {
+  overflow: scroll;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+
+.Q_ask {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column; }
+
+#comment {
+  padding: 5px;
+  font-family: serif;
+  font-weight: lighter; }
+
+.askarea,
+.inputfild {
+  width: 240px; }
+
+#u_name {
+  color: blue;
+  padding-right: 0px; }
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+/*# sourceMappingURL=_about.css.map */

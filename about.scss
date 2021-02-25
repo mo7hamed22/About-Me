@@ -1,0 +1,237 @@
+$iconfonzise:1rem;
+
+@mixin _fonts($_myfon:$iconfonzise) {
+    font-size: $_myfon;
+
+}
+
+@mixin _padding($pad1, $pad2:$pad1) {
+    padding: $pad1 $pad2;
+}
+
+@mixin _color($color) {
+    color: $color;
+}
+
+@mixin _background($color) {
+    background-color: $color;
+}
+
+@mixin _width($par) {
+    width: $par;
+}
+
+%sharedclass1 {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+//=========================
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    @include _width(25%);
+    margin-bottom: 16px;
+    @include _padding(0, 8px);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    display: none;
+    //    opacity: 0;
+}
+
+.img-container {
+    text-align: center;
+
+    img {
+        border-radius: 80%;
+    }
+}
+
+//===
+.about-section {
+    @include _padding(50px);
+    text-align: center;
+    @include _background(#474e5d);
+    @include _color(white);
+}
+
+.container {
+    @include _padding (0, 16px);
+}
+
+.container {
+    &::after {
+        @extend %sharedclass1;
+    }
+}
+
+.row {
+    &::after {
+        @extend %sharedclass1;
+    }
+}
+
+.title {
+    @include _color(grey);
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    @include _padding(8px);
+    @include _color(white);
+    @include _background(#000);
+    text-align: center;
+    cursor: pointer;
+    @include _width(100%);
+}
+
+.button {
+    &:hover {
+        @include _background(#555);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        @include _width(100%);
+        display: block;
+    }
+}
+
+//============Icon social 
+
+
+//.social-media {
+//    display: inline-flex;
+//    justify-content: center;
+//    margin-bottom: 5px;
+//    margin-right: 5px;
+//    right: 0px;
+//    padding: 20px;
+//
+//
+//}
+
+.facebook {
+    @include _color(#3b5998);
+    @include _fonts();
+}
+
+.linkedin {
+    @include _color(#00aced);
+
+}
+
+.twitter {
+    @include _color(#00aced);
+}
+
+.github {
+    @include _color(#4078c0);
+
+}
+
+
+.social-icon {
+    height: 30px;
+    width: 30px;
+    @include _fonts();
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    @include _color(#333);
+    border-radius: 70%;
+    text-decoration: none;
+    border: 1px dotted #333;
+    transition: 0.3s;
+}
+
+.social-icon {
+    &:hover {
+
+        border-color: #00aced;
+        text-decoration: none;
+
+    }
+}
+
+.contact-links {
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    @include _color(#3525af);
+    right: 0px;
+
+}
+
+//============anser divs 
+.anser {
+    overflow: scroll;
+    height: 500px;
+    //    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Q_ask {
+    width: 50%;
+    margin: 10px;
+    //    justify-content: space-around;  
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#comment {
+    padding: 5px;
+    font-family: serif;
+    font-weight: lighter;
+
+}
+
+.askarea,
+.inputfild {
+    width: 240px;
+}
+
+#u_name {
+    color: blue;
+    padding-right: 0px;
+
+}
+
+
+
+
+
+//form > * {
+//    flex: 1 1 auto;
+//}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
